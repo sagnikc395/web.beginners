@@ -18,3 +18,29 @@ function findNumberTypes(arr) {
 console.log(findNumberTypes([1, 2, 3, 4, 5, 5, 7, 8, 9]));
 
 console.log(findNumberTypes([100, 99, 97, 98, 96, 95, 94, 93, 92, 91, 57]));
+
+const personArray = [
+  {
+    name: "sagnikc395",
+    age: 22,
+  },
+  {
+    name: "sagnikc2",
+    age: 45,
+  },
+];
+
+//find the ages if they are even in the object
+const filterObject = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].age % 2 == 0) {
+      return {
+        name: array[i].name,
+        status: "Success",
+        nextAge: array[i].age + 1,
+      };
+    }
+  }
+};
+
+console.log(filterObject(personArray));
