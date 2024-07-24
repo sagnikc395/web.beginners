@@ -33,3 +33,20 @@ console.log("jello world, jello are you ?".replace("jello", "hello"));
 
 // split -> split on a delimiter
 console.log("hi;my;name;is;sagnik".split(";"));
+
+//trim -> remove space from beginning and end of string
+
+console.log("           helo            ".trim());
+
+//.toUpper and .toLower to upper and lowercase string
+
+console.log("happy".toUpperCase());
+console.log("HAPPY".toLowerCase());
+
+//reading input as number instead of string ; global function, exported by default into js
+console.log(parseInt("32") == 32 ? "true" : "false");
+
+//same for parseFloat
+console.log(
+  parseFloat("3.14159") == parseFloat(Math.PI.toFixed(5)) ? "true" : "false"
+);
