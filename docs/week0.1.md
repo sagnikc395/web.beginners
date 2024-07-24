@@ -86,3 +86,60 @@
   \<input id="username">
 
 -
+
+## CSS Basics
+
+- made for styling a webpage -> colors,font-sizes,bg colors,
+- used for positioning things on the page.
+- how to add styles ?
+
+  - add a style attribute to the tag.
+
+- common styling attributes(CSS is huge, these are what are most frequently used):
+
+  - color
+  - background
+  - border-radius
+  - border
+  - padding / margin
+  - box-shadow
+
+- padding -> to pad the div with some extra space.
+- border,border-radius -> to add border and colors
+- background -> to add background colors
+- color -> text color
+- margins and padding have a very subtle difference between them.
+
+  - to add space within the div it is padding ,
+  - to add space outside the div it is margin
+
+- box-shadow -> very similar to a div, and allows us to add a shadow to a box.
+
+  - requires 3 pixels gradient color and one color.
+  - shadows are tweakedable via changing the parameters.
+  - First Parameter -> direction towards which the shadow should go towards.(left or right)
+  - generally as a developer, we get a figma file and need to copy the css on our website.
+
+- generally enought to build basic loading page.
+
+### how to add spaces ?
+
+- divs always take up all the space available horizontally, spans only take up as much space as needed.
+- how to make divs that only take the space they need ?
+
+- Dumb Way:
+
+  - use the float property -> the span we want floated to the right , add float:right, puts it to the right of the specific div.
+
+- Ideal way of Doing this i.e to position element is to use Flexbox properties:
+  - display:flex , tells that we are going to use flexbox and the children dont need to use all the width they need, but they need to be right next to each other.
+  - justify-content -> to place where to keep the items flow, default value is start, can do end,center etc.
+  - can also position equally by controlling the space -> space-between
+- flexbox is the best way to position elements, other ways include absolute, floating etc.
+
+- space-between -> all the children are equally spaced.
+- flexbox only works for the immediate children.
+
+  - so for applying in the components near to us , rather than on the parent one.
+
+- gap to add gap between children components.
