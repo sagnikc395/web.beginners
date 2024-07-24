@@ -47,9 +47,12 @@
 ### Complex Primitives in JS(Arrays,Objects)
 
 - arrays and objects
-- to hold more data
+- to hold more data and varying types.
+- objects store values in the form of key value pairs in JS.
 
 ### Functions in Javascript
+
+-
 
 ### Practice Problem Solving
 
