@@ -26,3 +26,16 @@ console.log(currentDate.toDateString());
 
 //get time in ms from 1970s (Epoch Timestamp)
 console.log(currentDate.getTime());
+
+function calculateSum() {
+  let a = 0;
+  for (let i = 0; i < 100_000; i++) {
+    a += i;
+  }
+  return a;
+}
+
+let start = new Date().getTime();
+calculateSum();
+let end = new Date().getTime();
+console.log("Time taken in ms ", end - start);
