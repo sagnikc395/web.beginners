@@ -52,7 +52,11 @@
 
 ### Functions in Javascript
 
--
+- they allow us to abstract out logic in our program.
+- take arguments as an input
+- return a value as an output
+- we can think of them as an independent program that is supposed to do something given an input
+- Functions can take other functions as input -> callbacks
 
 ### Practice Problem Solving
 
