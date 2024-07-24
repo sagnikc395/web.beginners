@@ -17,3 +17,8 @@ console.log(init);
 //put into front of array
 init.unshift(123);
 console.log(init);
+
+//to merge 2 arrays
+let anotherArr = [4, 5, 6];
+anotherArr = init.concat(anotherArr);
+console.log(anotherArr);
