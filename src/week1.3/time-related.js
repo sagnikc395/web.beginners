@@ -23,3 +23,6 @@ console.log("New Date -> " + currentDate);
 
 console.log(currentDate.getTimezoneOffset());
 console.log(currentDate.toDateString());
+
+//get time in ms from 1970s (Epoch Timestamp)
+console.log(currentDate.getTime());
