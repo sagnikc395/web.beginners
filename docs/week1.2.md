@@ -39,9 +39,15 @@
 
 ### Simple Primitives in JS(Numbers,strings, booleans)
 
-
+- variables(let,var,const)
+- data types -> strings, numbers and booleans
+- if/else
+- loops -> for loops
 
 ### Complex Primitives in JS(Arrays,Objects)
+
+- arrays and objects
+- to hold more data
 
 ### Functions in Javascript
 
