@@ -44,3 +44,35 @@ const filterObject = (array) => {
 };
 
 console.log(filterObject(personArray));
+
+//write a program to print all the male's first name given a complex object
+const UserResponseObject = [
+  { name: "Sagnik", gender: "male", age: 23 },
+  { name: "Mohit", gender: "male", age: 25 },
+  { name: "Urvashi", gender: "female", age: 20 },
+  { name: "Savita", gender: "female", age: 26 },
+  { name: "Rahul", gender: "male", age: 26 },
+];
+
+const getMalesFirstName = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].gender === "male") {
+      console.log(array[i].name);
+    }
+  }
+};
+
+console.log(getMalesFirstName(UserResponseObject));
+
+// write a program that reverses all the elements of the array
+const reverseList = (array) => {
+  let mid = Math.floor(array.length / 2);
+  for (let i = 0; i < mid; i++) {
+    let temp = array[i];
+    array[i] = array[array.length - i - 1];
+    array[array.length - i - 1] = temp;
+  }
+  return array;
+};
+
+console.log(reverseList([1, 2, 3, 4, 5, 6, 7, 8, 9]));
