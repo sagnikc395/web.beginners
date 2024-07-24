@@ -33,4 +33,4 @@ for (let i = 0; i < anotherArr.length; i++) {
 //for every item in the array, we can pass a function to item.
 anotherArr.forEach((item) => console.log(item));
 
-
+//map,filter,find and sort
