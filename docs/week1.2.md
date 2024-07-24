@@ -11,15 +11,35 @@
 ### Interpreted vs Compiled Languages
 
 - compilers convert high level developer friendly code into 0s and 1s.
-- (10:50)
+- things that we can write in plain english.
+- C++ is a compiled language -> high level lang -> binary ; i.e compilation + linking required.
+- JS is interpreter -> just run node \<file-name> , can simply directly run this code. A specific compilation step is not required.
+- It is going line by line, it does not care about specific steps.
+- Compilation does not happen, if there is an error in the code, while in interpreted we can run line by line, can run partially if the error comes later.
 
 ### Why JS >> other languages in some use-cases
 
+- browsers can only understand HTML/CSS/JS(for most of the cases)
+- thanks to nodejs , JS can also be used for "Backend Development"
+
 ### Strict vs Dynamic Languages
+
+- C++ has very strict types i.e during compilation a lot of bugs can be eliminated from the types itself, while in JS, each binding can take any type of value.
+- JS is loosely typed -> allows us to change types of varibales -> not great, it will create a bunch of runtime errors later down the line.
 
 ### Single Threaded Nature of JS
 
+- Go, C++ etc are multi-threaded , while JS, Lua etc. are single threaded.
+- Cores means -> 1 single core, can run a single core at the same time.
+- 1 single core can only run 1 thing at time, the more number of cores we have, the more number of processes we can have.
+- JS is always restricted to a single core, cannot decrease the load across the cores and to optimize the time to run it.
+- However, there ware ways to make it use all cores in out machine.
+  - nodejs workers / cluster module.
+- JS runs line by line and only one line runs at once.
+
 ### Simple Primitives in JS(Numbers,strings, booleans)
+
+
 
 ### Complex Primitives in JS(Arrays,Objects)
 
