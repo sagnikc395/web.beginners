@@ -62,7 +62,7 @@
 
 ### Callback functions,Event loop, Callback Queue, Async programming
 
-- functions insides functions
+- functions insides functions, and functions passed into another functions.
 - setTimeout
 
   - inbuilt function baked into browser and node
