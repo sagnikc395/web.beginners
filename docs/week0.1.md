@@ -58,4 +58,31 @@
 
 - \<html> , \<head> \<body> etc. are high level tags that are good to know for structuring the body and the actual content goes into body and head has metadata and import external scripts.
 
+- div takes up all the space in the given line.
+- to structure this between structurally and on the same line, we can use the span tag i.e in the inner children
+- p and div are alsmost same .
+- can change the default style of a tag via css.
+
+- for making navigation use a tag , target= \_blank makes the blank search.
+- b is for making your content as bold, i is for italic text.
+
+- button tag lets us create a button, the pointer and color changes -> natively they look pretty ugly in HTML.
+
+- buttons need some functionality associated with them , when user do onclick, onhover etc.
+
+- input tag is to get user input
+
+- any website is just made up of a bunch of tags and has recursive patterns of tags and items inside.
+- no end of the amount of tags we can learn, can learn them over time
+
+### Attributes:
+
+- src, href ,onclick ,id etc are called attributes of a tag.
+- extra things that we can pass onto the tags.
+- some common ones:
+  \<img src="">
+  \<a href=" "></a>
+  \<button onclick="">
+  \<input id="username">
+
 -
