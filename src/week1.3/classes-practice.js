@@ -1,4 +1,6 @@
 //classes and oop in js
+//classes are a structure of state and associated methods
+// that are put together
 
 class Animal {
   //they lets us put a bunch of properties of certain types
@@ -10,6 +12,10 @@ class Animal {
   describe() {
     return `${this.name} has ${this.legCount} legs!!`;
   }
+  static type() {
+    //associate with the object itself
+    console.log(`Animal class type`);
+  }
 }
 
 //an instance of the class
@@ -17,3 +23,4 @@ class Animal {
 const dog = new Animal("mark the doggy", 4);
 console.log(dog.describe());
 
+Animal.type();
