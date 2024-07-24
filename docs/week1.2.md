@@ -62,4 +62,16 @@
 
 ### Callback functions,Event loop, Callback Queue, Async programming
 
-### callback hell and promises.
+- functions insides functions
+- setTimeout
+
+  - inbuilt function baked into browser and node
+  - second argument -> number of milliseconds we need to wait before the first argument runs
+  - first arguments can be any expression.
+
+- us passing functions to values as methods is also callback.
+
+- setInterval
+  - same like setTimeout, execept that is calls after some intervals.
+
+### Callback hell and Promises.
