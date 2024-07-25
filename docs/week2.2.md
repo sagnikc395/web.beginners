@@ -141,3 +141,4 @@
 - payload is the meat of the thing that we want to send to the backend api endpoint.
 - whenever we are setting server we can lock our server with the given server and set cookies accordingly.
 - to send body in the browser, we send using the query parameters using like ?message=123
+- body-parser module enables us to parse incoming request bodies in a middleware. Express.js server needs to know what type of data we are sending over the network, so it knows how to parse it.
