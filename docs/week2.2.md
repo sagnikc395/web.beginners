@@ -132,4 +132,4 @@
 ### Express , post and get requests and sending data via body:
 
 - amongst data that went out is a cookie that went out.
-- 
+- express does not handle the body of the response, rather hands it over to another thing to handle the body. use body-parser.
