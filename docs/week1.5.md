@@ -35,4 +35,12 @@ Eg: file I/O is async by nature.
 - fs.readFile -> to read file from our filesystem
 - fetch -> to fetch some data from an API endpoint
 
+## How Does JS keep information about async functions ?
+
+- callstack, webapis, callback queue and the event loop are high level thing make it asynchronous.
+- callstack -> what is actually being put on the stack to actually been added. executed line by line and put on the stack
+- webapis handles the async part, while the callstack executes the sync part line by line.
+- while our thread is busy, we will ignore the elements in the callback queue and add the elements from the callback queue, when the main thread is free.
+- the deal with event loop is its task to check if the main thread is free, its task is to put the elements from the callback queue and any other events if completed, and gets pulled from webapis -> callbackqueue -> callstack.
+
 
