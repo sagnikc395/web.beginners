@@ -2,7 +2,9 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const port = 3000;
+//either set process in env variables or use a static port
+// or can use .env file to define it, or export it in our shell using export PORT etc.
+const port = process.env.PORT || 3000;
 
 const app = express();
 
