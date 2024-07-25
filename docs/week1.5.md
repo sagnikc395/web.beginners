@@ -28,3 +28,11 @@ Eg: file I/O is async by nature.
 - pre-made function js made for us available to use.
 - what makes this async ?
   - when the pointer reaches the line on setTimeout funciton call, it does not wait for the function to complete before going to next line, rather pushes it into the stack.
+
+## what are the common async functions ?
+
+- setTimeout
+- fs.readFile -> to read file from our filesystem
+- fetch -> to fetch some data from an API endpoint
+
+
