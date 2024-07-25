@@ -140,3 +140,4 @@
 - each process binds itself to a part, and when we send a request, it starts from the default port.
 - payload is the meat of the thing that we want to send to the backend api endpoint.
 - whenever we are setting server we can lock our server with the given server and set cookies accordingly.
+- to send body in the browser, we send using the query parameters using like ?message=123
