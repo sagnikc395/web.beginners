@@ -133,3 +133,10 @@
 
 - amongst data that went out is a cookie that went out.
 - express does not handle the body of the response, rather hands it over to another thing to handle the body. use body-parser.
+- using bodyparser as a middleware i.e whenever body has some json , it will first pass on the bodyparser , which will parse the json first and then handle to the get.
+- can use nodemon to provide hot reloading.
+- fetch is a webapi , async that allows us to fetch some details from a remote.
+- anytime a request that comes /asd , return hello world.
+- each process binds itself to a part, and when we send a request, it starts from the default port.
+- payload is the meat of the thing that we want to send to the backend api endpoint.
+-

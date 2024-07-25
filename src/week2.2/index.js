@@ -24,6 +24,13 @@ app.post("/data-send", (req, res) => {
   });
 });
 
+app.post("/api/conversation", (req, res) => {
+  const message = req.body.message;
+  res.json({
+    output: "long response !!!!",
+  });
+});
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
