@@ -129,4 +129,7 @@
   - here in the end map a string(domain name) to an IP.
   - if we ever buy a URL of our own, well need to point to it to the IP of our server.
 
-###
+### Express , post and get requests and sending data via body:
+
+- amongst data that went out is a cookie that went out.
+- 
