@@ -53,4 +53,8 @@
 - eslint.config.mjs is the configuration created -> modern approach -> downside is that we may not be able to bring some plugins in this
 
 - package.json:
+
   - add a new script in package.json to include lint in the commands to check for the lints.
+  - also add `yarn add typescript` for the project, otherwise it would complain.
+
+- and then run as yarn lint
