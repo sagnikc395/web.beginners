@@ -1,10 +1,10 @@
 import express from "express";
 
 const app = express();
+// eslint-disable-next-line
 const x = 1;
 
 app.get("/", (req, res) => {
-  console.log(`the value of x is ${x}`);
   res.json({
     message: "hi there",
   });

@@ -58,3 +58,7 @@
   - also add `yarn add typescript` for the project, otherwise it would complain.
 
 - and then run as yarn lint
+
+- to ignore the eslint recommendations we can ignore as
+  eg:
+  // eslint-disable-next-line
