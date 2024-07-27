@@ -88,6 +88,18 @@ app.delete("/", (req, res) => {
   //   kidneyObj["kidney"] -= 1;
   //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
   //   res.send(repr);
+
+  // remove all their unhealthy kidneys
+  let res = [];
+  users[0].kidneys.forEach((kidney) => {
+    if (kidney.healthy) {
+      res.push({
+        healthy: true,
+      });
+    }
+  });
+  users[0].kidneys = res;
+  res.send({ msg: "done!" });
 });
 
 app.listen(PORT, () => {
