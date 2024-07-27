@@ -51,3 +51,20 @@
 ```
 ?para1=arg1&para2=arg2
 ```
+
+- req -> request -> anything we pass in input, or headers etc.
+- res -> response -> whatever the server responds back with, status code, HTML etc, data/headers to send back.
+
+- in our doctor example , we can think of our CRUD logic as:
+
+  - GET -> going for a consultation to get a check up
+  - POST -> going to get new metal supportrs due to fracture
+  - PUT -> going to get kidney replaced.
+  - DELETE -> going to get a kidney removed.
+
+### Status Code
+
+- 200 -> everything OK
+- 404 -> not found
+- 500 -> Server down
+- 411 -> inputs are incorrect
