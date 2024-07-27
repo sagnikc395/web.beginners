@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@types/node", "npm:20.14.12"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:59d11171b1c7be0da505b135417a619b1bf5b1b135e02f4df0b3baf14179d90307d4993958de68e7e69466cc7099f0a8674dbdc546236113e641c56c5544bdf1#npm:7.17.0"],\
@@ -961,6 +962,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/node", [\
+      ["npm:20.14.12", {\
+        "packageLocation": "../../../../../../.yarn/berry/cache/@types-node-npm-20.14.12-c6cc526f86-10c0.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:20.14.12"],\
+          ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/prop-types", [\
       ["npm:15.7.12", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/@types-prop-types-npm-15.7.12-b093f43531-10c0.zip/node_modules/@types/prop-types/",\
@@ -1837,6 +1848,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["eslint-react", "workspace:."],\
+          ["@types/node", "npm:20.14.12"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:59d11171b1c7be0da505b135417a619b1bf5b1b135e02f4df0b3baf14179d90307d4993958de68e7e69466cc7099f0a8674dbdc546236113e641c56c5544bdf1#npm:7.17.0"],\
@@ -3386,6 +3398,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["undici-types", [\
+      ["npm:5.26.5", {\
+        "packageLocation": "../../../../../../.yarn/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["unique-filename", [\
       ["npm:3.0.0", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/unique-filename-npm-3.0.0-77d68e0a45-10c0.zip/node_modules/unique-filename/",\
@@ -3454,7 +3475,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:59d11171b1c7be0da505b135417a619b1bf5b1b135e02f4df0b3baf14179d90307d4993958de68e7e69466cc7099f0a8674dbdc546236113e641c56c5544bdf1#npm:5.3.5"],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", null],\
+          ["@types/node", "npm:20.14.12"],\
           ["@types/sass", null],\
           ["@types/stylus", null],\
           ["@types/sugarss", null],\

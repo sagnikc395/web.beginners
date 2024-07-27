@@ -87,3 +87,13 @@
 - fyi you dont have to, vite the bundler, already does this.
 - makes this a whole lot easier.
 - it uses .eslintrc.cjs instead of the eslint.config.mjs that we created.
+
+### Popular ESlint config:
+- we can roll our own config, our use a community supported popular one.
+- most popular are:
+  - **airbnb javascript guide**
+  - vercel configuration
+  - shopify config 
+  - meta config 
+
+- 
