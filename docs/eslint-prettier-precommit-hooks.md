@@ -110,6 +110,8 @@
 
 ### ESlint with Next.js
 
+[src](https://github.com/sagnikc395/prettier-eslint-next-example)
+
 - create a next js project with create-next-app
 - nextjs itself prompts for the eslint config.
 - this extends the next/core-web-vitals configuration.
@@ -128,8 +130,16 @@
 - folders where we dont want to run prettier.
 - `npx prettier . --write` -> mutate the files and add our config rules.
 - make sure to prettier to override eslint config; otherwise it will complain.
--
 
 ### pre-commit hooks:
 
+- projects hosted on github.
+- developers forget that we need to run prettier and eslint before the commit.
+- pre-commit hook -> a hook that runs before the commit is done.
+
 - ## husky:
+  - most popular one to do precommit.
+  - `npm install husky --save-dev`
+  - to setup husky:
+    - `npm husky init`
+    - creates a .husky/pre-commit file
