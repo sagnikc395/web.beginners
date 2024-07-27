@@ -13,15 +13,43 @@ const PORT = 4000;
 
 const app = express();
 
-const kidneyObj = {
-  kidney: 0,
-  health: "",
-};
+// let kidneyObj = {
+//   kidney: 2,
+//   health: "unstable",
+// };
+
+//default state
+const users = [
+  {
+    name: "sagnikc",
+    kidneys: [
+      {
+        healthy: false,
+      },
+    ],
+  },
+];
 
 app.get("/", (req, res) => {
   //user can check how many kidneys and their health
-  const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
-  res.send(repr);
+  //const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
+  //res.send(repr);
+  //   const item = req.query.name;
+  //const username = users[item].name;
+  const sagnikKidneys = users[0].kidneys;
+  const kidneyCount = sagnikKidneys.length;
+
+  const healthyKidneys = sagnikKidneys.reduce(
+    (count, item) => (item ? count + 1 : count),
+    0
+  );
+  const unhealthyKidneys = kidneyCount - healthyKidneys;
+
+  res.json({
+    healthyKidneys,
+    unhealthyKidneys,
+    kidneyCount,
+  });
 });
 
 app.post("/addkidney", (req, res) => {
@@ -46,13 +74,6 @@ app.delete("/delkidney", (req, res) => {
   res.send(repr);
 });
 
-const setInitialKidneyState = () => {
-  kidneyObj["kidney"] = 2;
-  kidneyObj["health"] = "unstable";
-};
-
 app.listen(PORT, () => {
-  //set initial kidney state
-  setInitialKidneyState();
   console.log(`Server started on http://localhost:${PORT}`);
 });
