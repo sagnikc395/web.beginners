@@ -11,3 +11,10 @@ console.log(newArray);
 const newArr2 = input.map((item) => item * 2);
 console.log(newArr2);
 
+//reduce
+
+const newArr3 = input.reduce((prev, iter) => {
+  return prev + iter;
+}, 0);
+
+console.log(newArr3);
