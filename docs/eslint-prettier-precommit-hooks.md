@@ -89,20 +89,29 @@
 - it uses .eslintrc.cjs instead of the eslint.config.mjs that we created.
 
 ### Popular ESlint config:
+
 - we can roll our own config, our use a community supported popular one.
 - most popular are:
+
   - **airbnb javascript guide**
   - vercel configuration
-  - shopify config 
-  - meta config 
+  - shopify config
+  - meta config
 
-- install by 
-```yarn add eslint-config-airbnb eslint-config-airbnb-typescript @typescript-eslint/dot-notation eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import 
+- install by
+
+```yarn add eslint-config-airbnb eslint-config-airbnb-typescript @typescript-eslint/dot-notation eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import
+
 ```
+
 - note however this is for the old config , for new config see :
-https://stackoverflow.com/questions/74925642/how-to-use-eslint-config-airbnb-with-the-new-eslint-config-spec
+  https://stackoverflow.com/questions/74925642/how-to-use-eslint-config-airbnb-with-the-new-eslint-config-spec
 - we add parserConfig options , and include to ignore vite.config.js into the ignorePatterns arrays in .eslintconfig.cjs
 
+### ESlint with Next.js
 
-### ESlint with Next.js 
-- 
+- create a next js project with create-next-app
+- nextjs itself prompts for the eslint config.
+- this extends the next/core-web-vitals configuration.
+  - all the rules for a vital applications.
+- need to make this an array to extend.
