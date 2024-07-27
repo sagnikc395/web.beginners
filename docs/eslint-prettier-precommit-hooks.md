@@ -127,6 +127,8 @@
 - create a prettierignore file in the root of the project.
 - folders where we dont want to run prettier.
 - `npx prettier . --write` -> mutate the files and add our config rules.
+- make sure to prettier to override eslint config; otherwise it will complain.
+-
 
 ### pre-commit hooks:
 
