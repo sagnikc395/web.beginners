@@ -42,5 +42,12 @@
 - adress of the doctor's chamber -> port .
 
 - can build a hopsital i.e multiple servers that can have multile doctors and various functionalities to users and return that to users back.
+- the port needs to be unique for each server - otherwise it would be able to serve requests.
 
-- the port needs to be unique for each server -> otherwise it would be able to serve requests.
+### Users passing input:
+
+- query parameters:
+
+```
+?para1=arg1&para2=arg2
+```
