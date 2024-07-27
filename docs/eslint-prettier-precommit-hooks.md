@@ -62,3 +62,12 @@
 - to ignore the eslint recommendations we can ignore as
   eg:
   // eslint-disable-next-line
+
+### how to add own rules and prettier checks ?
+
+- ESLint primary use for static anlysis of code.
+- It can also be extended to add stylistic code changes and enforcing config options and adding indentation rules.
+
+- ESLInt ideally meant for checking code quality and not code formatting.
+- We can still enable code formatting.
+  - add inot the eslint.config.mjs
