@@ -79,4 +79,10 @@
   - req.body translates to undefined.
   - use middlewares to parse and use bodyParser.json() -> to parse the JSON body on the server.
 
+- backend should do a lot of input validation, handle edge cases, data cleanup, proper errors messagingin.
+- some basic one in the assignment ?
+
+  - what should happen if they try to delete when there are no kidneys ?
+  - what should happen if they try to make a kidney healthy when all are already healthy ?
+
 -

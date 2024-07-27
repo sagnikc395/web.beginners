@@ -76,9 +76,12 @@ app.put("/", (req, res) => {
   //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
   //   res.send(repr);
   // update all kidenys of user to healthy
+
   users[0].kidneys.forEach((obj) => {
     obj.healthy = true;
   });
+
+  res.json({});
 });
 
 app.delete("/", (req, res) => {
@@ -90,17 +93,49 @@ app.delete("/", (req, res) => {
   //   res.send(repr);
 
   // remove all their unhealthy kidneys
-  let res = [];
-  users[0].kidneys.forEach((kidney) => {
-    if (kidney.healthy) {
-      res.push({
-        healthy: true,
-      });
+  // should returna 411 only if atleast one unhealthy kidney is there do, else return 411
+
+  if (isThereAtLeastOnceUnhealthyKidney()) {
+    let res = [];
+    // users[0].kidneys.forEach((kidney) => {
+    //   // if (kidney.healthy) {
+    //   //   res.push({
+    //   //     healthy: true,
+    //   //   });
+    //   // }
+    //   if (!kidney.healthy) {
+    //     atleastOneUnhealthyKideny = true;
+    //   }
+    // });
+    for (let i = 0; i < users[0].kidneys.length; i++) {
+      if (users[0].kidneys[i].healthy) {
+        res.push({
+          healthy: true,
+        });
+        users[0].kidneys = res;
+        res.json({
+          msg: "done!",
+        });
+      } else {
+        res.status(411).json({
+          msg: "You have no bad kidneys!",
+        });
+      }
     }
-  });
-  users[0].kidneys = res;
-  res.send({ msg: "done!" });
+  }
+  //   users[0].kidneys = res;
+  //   res.send({ msg: "done!" });
 });
+
+function isThereAtLeastOnceUnhealthyKidney() {
+  let atleastOneUnhealthyKidney = false;
+  for (let i = 0; i < users[0].kidneys.length; i++) {
+    if (!users[0].kidneys[i].healthy) {
+      atleastOneUnhealthyKidney = true;
+    }
+  }
+  return atleastOneUnhealthyKidney;
+}
 
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
