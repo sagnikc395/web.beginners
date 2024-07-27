@@ -68,3 +68,12 @@
 - 404 -> not found
 - 500 -> Server down
 - 411 -> inputs are incorrect
+
+### input handling
+
+- query parameters for GET requests
+- for post requests, we send requests via body
+- to send posts requests , use hoppscotch to send data via body.
+- cannot read properties of undefined -> isHealthy.
+  - req.body translates to undefined.
+  - use middlewares to parse and use express.json()

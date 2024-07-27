@@ -8,6 +8,7 @@
  */
 
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const PORT = 4000;
 
@@ -17,6 +18,7 @@ const app = express();
 //   kidney: 2,
 //   health: "unstable",
 // };
+app.use(bodyParser.json());
 
 //default state
 const users = [
@@ -52,17 +54,27 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/addkidney", (req, res) => {
-  kidneyObj[kidney] += 1;
-  const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
-  res.send(repr);
+app.post("/", (req, res) => {
+  //   kidneyObj[kidney] += 1;
+  //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
+  //   res.send(repr);
+  // add a new kidney stastus for every post request
+  const isHealthy = req.body.isHealthy;
+  //update the inmemory object
+  users[0].kidneys.push({
+    healthy: isHealthy,
+  });
+  console.log("Post Method has been called !");
+  return res.json({
+    msg: "Done!",
+  });
 });
 
 app.put("/putkey", (req, res) => {
-  const kidneystatus = req.query.kidneys;
-  kidneyObj["health"] = kidneystatus;
-  const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
-  res.send(repr);
+  //   const kidneystatus = req.query.kidneys;
+  //   kidneyObj["health"] = kidneystatus;
+  //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
+  //   res.send(repr);
 });
 
 app.delete("/delkidney", (req, res) => {
