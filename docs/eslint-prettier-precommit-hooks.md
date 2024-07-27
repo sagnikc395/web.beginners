@@ -115,3 +115,19 @@
 - this extends the next/core-web-vitals configuration.
   - all the rules for a vital applications.
 - need to make this an array to extend.
+
+### Prettier:
+
+- make our code slightly prettier to look at.
+- opionionated code formatter and enforced them.
+- overridable.
+- eslint had no opinions.
+- `yarn add prettier`
+- create a prettierrc file in the root of the project.
+- create a prettierignore file in the root of the project.
+- folders where we dont want to run prettier.
+- `npx prettier . --write` -> mutate the files and add our config rules.
+
+### pre-commit hooks:
+
+- ## husky:
