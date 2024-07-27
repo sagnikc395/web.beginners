@@ -75,5 +75,8 @@
 - for post requests, we send requests via body
 - to send posts requests , use hoppscotch to send data via body.
 - cannot read properties of undefined -> isHealthy.
+
   - req.body translates to undefined.
-  - use middlewares to parse and use express.json()
+  - use middlewares to parse and use bodyParser.json() -> to parse the JSON body on the server.
+
+-

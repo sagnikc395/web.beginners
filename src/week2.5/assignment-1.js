@@ -70,20 +70,24 @@ app.post("/", (req, res) => {
   });
 });
 
-app.put("/putkey", (req, res) => {
+app.put("/", (req, res) => {
   //   const kidneystatus = req.query.kidneys;
   //   kidneyObj["health"] = kidneystatus;
   //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
   //   res.send(repr);
+  // update all kidenys of user to healthy
+  users[0].kidneys.forEach((obj) => {
+    obj.healthy = true;
+  });
 });
 
-app.delete("/delkidney", (req, res) => {
-  if (kidneyObj[kidney] < 0) {
-    throw new Error(`Cannot delete any more kidneys!`);
-  }
-  kidneyObj["kidney"] -= 1;
-  const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
-  res.send(repr);
+app.delete("/", (req, res) => {
+  //   if (kidneyObj[kidney] < 0) {
+  //     throw new Error(`Cannot delete any more kidneys!`);
+  //   }
+  //   kidneyObj["kidney"] -= 1;
+  //   const repr = `The current number of kidneys: ${kidneyObj.kidney} and the status is ${kidneyObj.health}`;
+  //   res.send(repr);
 });
 
 app.listen(PORT, () => {
