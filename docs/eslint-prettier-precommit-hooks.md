@@ -102,3 +102,7 @@
 - note however this is for the old config , for new config see :
 https://stackoverflow.com/questions/74925642/how-to-use-eslint-config-airbnb-with-the-new-eslint-config-spec
 - we add parserConfig options , and include to ignore vite.config.js into the ignorePatterns arrays in .eslintconfig.cjs
+
+
+### ESlint with Next.js 
+- 
