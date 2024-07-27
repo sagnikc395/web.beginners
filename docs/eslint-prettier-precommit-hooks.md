@@ -70,4 +70,20 @@
 
 - ESLInt ideally meant for checking code quality and not code formatting.
 - We can still enable code formatting.
+
   - add inot the eslint.config.mjs
+
+- however most of the time , you use prebuilt configuration for linting and stylisitc changes.
+
+  - common available configs:
+    - airbnb
+
+- the root folder should have the eslint config.
+- eslintconfig.json is the old version and compatible with various other stuff.
+- with eslint vscode extension, we can create a .vscode folder and keep our config to autoformat code and indent them while saving.
+
+### ESLint in React Project
+
+- fyi you dont have to, vite the bundler, already does this.
+- makes this a whole lot easier.
+- it uses .eslintrc.cjs instead of the eslint.config.mjs that we created.
