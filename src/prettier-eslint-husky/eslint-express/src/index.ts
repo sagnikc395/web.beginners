@@ -9,3 +9,7 @@ app.get("/", (req, res) => {
     message: "hi there",
   });
 });
+
+function withoutSpace(x: number) {
+  //...
+}
