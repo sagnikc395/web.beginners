@@ -6,6 +6,26 @@ app.use(express.json());
 
 const schema = zod.array(zod.number());
 
+/*
+
+{
+    email: string -> email,
+    password: atleast 8 letters 
+    country: "IN","US",
+    ip : v6 
+}
+*/
+
+const schema2 = zod.object({
+  email: zod.string(),
+  password: zod.string(),
+  country: zod.literal("IN").or(zod.literal("US")),
+  ipaccess: zod.string().ip({
+    //only ip v6 allowed.
+    version: v6,
+  }),
+});
+
 function userMiddleware(req, res, next) {
   const username = req.query.username;
   const password = req.query.password;
