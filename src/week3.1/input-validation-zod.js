@@ -23,18 +23,25 @@ function kidneyMiddleware(req, res, next) {
   const kidneys = req.query.kidneys;
   const response = schema.safeParse(kidneys);
 
-  const kidneyLength = kidneys.legnth;
+  if (!response.success) {
+    res.status(411).json({
+      msg: "input is invalid",
+    });
+  } else {
+    const kidneyLength = kidneys.legnth;
 
-  //   if (kidneyId != 1 && kidneyId != 2) {
-  //     res.status(403).json({
-  //       msg: "Incorrect inputs",
-  //     });
-  //   } else {
-  //     next();
-  //   }
-  res.send({
-    response,
-  });
+    //   if (kidneyId != 1 && kidneyId != 2) {
+    //     res.status(403).json({
+    //       msg: "Incorrect inputs",
+    //     });
+    //   } else {
+    //     next();
+    //   }
+    res.send({
+      response,
+    });
+  }
+
   next();
 }
 
