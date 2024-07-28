@@ -5,25 +5,29 @@ const app = express();
 // be a number from 1-2
 //2. user should send a username and a password in headers.
 
-app.get("/health-checkup", (req, res) => {
+app.get("/health-checkup", function (req, res) {
   // slop way of doing health checkups here
-  const kidneyId = req.query.kidneyId;
+  const kid = req.query.kid;
   const username = req.headers.username;
   const password = req.headers.password;
 
-  if (username !== "sagnik" && password !== "pass") {
+  if (username !== "sagnik" || password !== "pass") {
     res.status(403).json({
-        msg: "User doesnt exist!"
+      msg: "Failed to Authenticate!",
     });
     return;
   }
 
-  if(kidneyId !== 1 || kidneyId !== 2 ) {
-    res.status(411).json({
-        msg: "wrong inputs!"
+  if (kid !== 1 || kid !== 2) {
+    res.status(403).json({
+      msg: "wrong inputs!",
     });
     return;
   }
-//valid kidneys
-  res.send(`Your heart is healthy !`);
+  //valid kidneys
+  res.json({ msg: `Your kidney is 🔥!` });
+});
+
+app.listen(3000, () => {
+  console.log(`Server started at http://localhost:3000`);
 });
