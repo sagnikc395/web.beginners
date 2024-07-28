@@ -17,7 +17,7 @@ const schema = zod.array(zod.number());
 */
 
 const schema2 = zod.object({
-  email: zod.string(),
+  email: zod.email(),
   password: zod.string(),
   country: zod.literal("IN").or(zod.literal("US")),
   ipaccess: zod.string().ip({
