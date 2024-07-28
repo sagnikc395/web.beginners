@@ -80,4 +80,18 @@ app.get("/health-checkup", function (req, res) {
 - actually three parameters to the callback function -> (req,res,next). next is a function in itself, which we call if we think things are fine.
 - express lets us chain through prechecks.
 - the last one is where we will not require next, rather send directly via res.
- 
+
+### Global Catches
+
+- at the end of the all the methods, if we do:
+
+````js
+
+app.use((err,req,res,next) => {
+  //can do something here
+})```
+````
+
+- it will act as a global catch , handling all the errors.
+- Global catches help us give the user a better error response.
+- Error-handling middleware -> special type of middleware function in Express that has 4 arguments instead of 3. Express recognizes it as a error-handling middleware because of these 4 arguments.

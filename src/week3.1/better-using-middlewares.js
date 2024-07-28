@@ -32,4 +32,11 @@ app.listen("/health-checkup", userMiddleware, kidneyMiddleware, (req, res) => {
   res.send("your kidney is healthy !");
 });
 
+//global catches -> handles all the exceptions
+app.use((err, req, res, next) => {
+  res.status(500).json({
+    msg: "sorry something is up with our server !",
+  });
+});
+
 app.listen(5000);
