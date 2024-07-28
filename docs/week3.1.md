@@ -95,3 +95,12 @@ app.use((err,req,res,next) => {
 - it will act as a global catch , handling all the errors.
 - Global catches help us give the user a better error response.
 - Error-handling middleware -> special type of middleware function in Express that has 4 arguments instead of 3. Express recognizes it as a error-handling middleware because of these 4 arguments.
+
+### Zod.
+
+- very common use case to do user validation on any http server.
+- need to do multiple checks for the input and common fields need to be checked and do input validation checks.
+- lots of growing concerns to address.
+- lots of input validation libraries ike zod to validate the user input.
+- to prevent for user to write ugly logic to clean the changes and use zod to do input validation the right way.
+- for js based , it's just schema validation.
