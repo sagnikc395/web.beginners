@@ -104,3 +104,13 @@ app.use((err,req,res,next) => {
 - lots of input validation libraries ike zod to validate the user input.
 - to prevent for user to write ugly logic to clean the changes and use zod to do input validation the right way.
 - for js based , it's just schema validation.
+
+### Authentication
+
+- As we can tell now, anyone can send requests to our backend.
+- They can just go to postman and send a request.
+- How do we ensure that this user has access to a certian resource ?
+
+- Dumb Way to do auth -> ask user to send username and password in all requests as headers.
+
+-
