@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replit</title>
+  </head>
+  <body>
+    <script>
+      async function getPokemonData() {
+        // const resp = Math.random(1000);
+        // alert(resp);
+        //using the fetch function to get response and get back the response
+        const resp = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+        console.log(resp.body);
+      }
+    </script>
+    <button onclick="getPokemonData()">Get Pokemon Data</button>
+  </body>
+</html>
