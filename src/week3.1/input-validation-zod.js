@@ -78,4 +78,26 @@ app.use((err, req, res, next) => {
   });
 });
 
+function validateInput(obj) {
+  const schema = zod.object({
+    email: zod.string().email(),
+    password: zod.string().min(8),
+  });
+
+  const response = schema.safeParse(obj);
+  console.log(response);
+}
+
+app.post("/login", (req, res) => {
+  const response = validateInput(req.body);
+
+  // check from zod validation for correct username and password
+  if (!response.success) {
+    res.json({
+      msg: "your inputs are invalid !",
+    });
+  }
+  return;
+});
+
 app.listen(5000);
